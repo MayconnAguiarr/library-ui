@@ -1,3 +1,31 @@
+<form>
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <h1>Cadastro de Livros</h1>
+    </div>
+
+    <div class ="ui-g-6 ui-fluid">
+      <label>Autor</label>
+      <input pInputText name = "autor"> 
+    </div>
+
+    <div class ="ui-g-6 ui-fluid">
+      <label>Titulo</label>
+      <input pInputText name = "titulo" >    
+    </div>
+
+    <div class ="ui-g-6 ui-fluid">
+      <label>Descrição</label>
+      <input pInputText name = "descricao" >    
+    </div>
+
+    <div class="ui-g-12">
+      <button pButton type="submit" label="Adicionar"></button>
+    </div> 
+  </div>
+</form>
+
+
 <div class="ui-g">
     <div class="ui-g-12">
       <p-dataTable [value] = "itensConsulta">
