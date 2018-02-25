@@ -1,13 +1,9 @@
-<table>
-  <tr>
-    <th>Autor</th>
-    <th>Titulo</th>
-    <th>Categoria</th>
-  </tr>
-  <tr>
-    <td>itemConsulta.author</td>
-    <td>itemConsulta.titulo</td>
-    <td>itemConsulta.categoria</td>
-  </tr>
-
-</table>
+<div class="ui-g">
+    <div class="ui-g-12">
+      <p-dataTable [value] = "itensConsulta">
+        <p-column field="autor" header= "Autor"></p-column>
+        <p-column field="titulo" header="Titulo"></p-column>
+        <p-column field="categoria" header="Categoria"></p-column>
+      </p-dataTable>
+  </div>
+</div>
