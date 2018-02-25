@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LivroService } from '../livro.service';
+
 @Component({
   selector: 'app-cadastro-livro',
   templateUrl: './cadastro-livro.component.html',
@@ -7,15 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroLivroComponent implements OnInit {
 
-  itensConsulta = [
-    {autor:'Oliveira Lima', titulo: ' O Movimento da Independência - 1821- 1822', categoria: '5'},
-    {autor:'Oliveira Lima', titulo: ' O Movimento da Independência - 1821- 1822', categoria: '5'},
-    {autor:'Oliveira Lima', titulo: ' O Movimento da Independência - 1821- 1822', categoria: '5'},
-  ];
+  itens =[];
 
-  constructor() { }
+  constructor(private livroService: LivroService) {
+    
+  } 
 
   ngOnInit() {
+    this.consultar();
+  }
+
+  consultar(){
+    this.livroService.listar().subscribe(dados => this.itens = dados);
   }
 
 }
