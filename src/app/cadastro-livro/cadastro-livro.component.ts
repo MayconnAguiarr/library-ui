@@ -26,6 +26,12 @@ export class CadastroLivroComponent implements OnInit {
 
   adiconar(frm: FormControl){
     console.log(frm.value);
+
+    this.livroService.adicionar(frm.value).subscribe(() =>{
+      frm.reset();
+      this.consultar();
+
+    });
   }
 
 }
