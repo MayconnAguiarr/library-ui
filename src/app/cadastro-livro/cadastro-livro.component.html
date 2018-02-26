@@ -6,25 +6,24 @@
 
     <div class ="ui-g-6 ui-fluid">
       <label>Autor</label>
-      <input pInputText name = "autor"> 
+      <input pInputText name = "autor" ng-model [required]="true">  
     </div>
 
     <div class ="ui-g-6 ui-fluid">
       <label>Titulo</label>
-      <input pInputText name = "titulo" >    
+      <input pInputText name = "titulo" ng-model [required]="true">    
     </div>
 
     <div class ="ui-g-6 ui-fluid">
       <label>Descrição</label>
-      <input pInputText name = "descricao" >    
+      <input pInputText name = "descricao" ng-model [required]="true">    
     </div>
 
     <div class="ui-g-12">
-      <button pButton type="submit" label="Adicionar"></button>
+      <button pButton type="submit" label="Adicionar" [disabled]="frm.invalid" ></button>
     </div> 
   </div>
 </form>
-
 
 <div class="ui-g">
     <div class="ui-g-12">
