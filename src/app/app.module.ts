@@ -1,6 +1,7 @@
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import{DataTableModule, ButtonModule, InputTextModule,
  InputMaskModule, CalendarModule} from 'primeng/primeng';
@@ -26,7 +27,8 @@ import { LivroService } from './livro.service';
     InputTextModule,
     InputMaskModule,
     CalendarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     LivroService

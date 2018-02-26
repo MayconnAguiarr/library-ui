@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{FormControl} from '@angular/forms';
 
 import { LivroService } from '../livro.service';
 
@@ -21,6 +22,10 @@ export class CadastroLivroComponent implements OnInit {
 
   consultar(){
     this.livroService.listar().subscribe(dados => this.itens = dados);
+  }
+
+  adiconar(frm: FormControl){
+    console.log(frm.value);
   }
 
 }
