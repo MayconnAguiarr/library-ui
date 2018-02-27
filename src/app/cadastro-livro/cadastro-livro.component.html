@@ -1,4 +1,4 @@
-<form #frm="ngForm" (ngSubmit)="adicionar(frm)">
+<form #frm="ngForm" (ngSubmit)="adicionar(frm)" autocomplete="off">
   <div class="ui-g">
     <div class="ui-g-12">
       <h1>Cadastro de Livros</h1>
@@ -6,17 +6,17 @@
 
     <div class ="ui-g-6 ui-fluid">
       <label>Autor</label>
-      <input pInputText name = "autor" ng-model [required]="true">  
+      <input pInputText name = "author" ngModel [required]="true">  
     </div>
 
     <div class ="ui-g-6 ui-fluid">
       <label>Titulo</label>
-      <input pInputText name = "titulo" ng-model [required]="true">    
+      <input pInputText name = "title" ngModel [required]="true">    
     </div>
 
     <div class ="ui-g-6 ui-fluid">
-      <label>Descrição</label>
-      <input pInputText name = "descricao" ng-model [required]="true">    
+      <label>Categoria</label>
+      <input pInputText name = "category" ngModel [required]="true">    
     </div>
 
     <div class="ui-g-12">
@@ -28,9 +28,9 @@
 <div class="ui-g">
     <div class="ui-g-12">
       <p-dataTable [value] = "itensConsulta">
-        <p-column field="autor" header= "Autor"></p-column>
-        <p-column field="titulo" header="Titulo"></p-column>
-        <p-column field="categoria" header="Categoria"></p-column>
+        <p-column field="author" header= "Autor"></p-column>
+        <p-column field="title" header="Titulo"></p-column>
+        <p-column field="category" header="Categoria"></p-column>
       </p-dataTable>
   </div>
 </div>

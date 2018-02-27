@@ -10,7 +10,7 @@ import { LivroService } from '../livro.service';
 })
 export class CadastroLivroComponent implements OnInit {
 
-  itens =[];
+  itensConsulta =[];
 
   constructor(private livroService: LivroService) {
     
@@ -21,17 +21,13 @@ export class CadastroLivroComponent implements OnInit {
   }
 
   consultar(){
-    this.livroService.listar().subscribe(dados => this.itens = dados);
+    this.livroService.listar().subscribe(dados => this.itensConsulta = dados);
   }
 
   adiconar(frm: FormControl){
-    console.log(frm.value);
-
     this.livroService.adicionar(frm.value).subscribe(() =>{
       frm.reset();
       this.consultar();
-
     });
   }
-
 }
