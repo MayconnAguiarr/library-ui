@@ -24,7 +24,7 @@ export class CadastroLivroComponent implements OnInit {
     this.livroService.listar().subscribe(dados => this.itensConsulta = dados);
   }
 
-  adiconar(frm: FormControl){
+  adicionar(frm: FormControl){
     this.livroService.adicionar(frm.value).subscribe(() =>{
       frm.reset();
       this.consultar();
