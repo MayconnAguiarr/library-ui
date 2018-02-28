@@ -2,7 +2,7 @@
    Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 1.7.1.
    
 ## Objetivo
-   Repositório criado para fins didáticos.
+   Repositório criado para fins didáticos.<br>
    Essa interface Front-end foi desenvolvida para acessar as informação de uma API<br>
    localizada em  https://github.com/MayconnAguiarr/libraryAPI.
    
